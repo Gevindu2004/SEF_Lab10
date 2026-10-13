@@ -2,6 +2,9 @@ using CampusEats.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Load optional local settings for development secrets (git-ignored)
+builder.Configuration.AddJsonFile("appsettings.Local.json", optional: true, reloadOnChange: true);
+
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

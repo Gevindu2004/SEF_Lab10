@@ -1,6 +1,10 @@
 bin/
 obj/
-appsettings.Production.json
+appsettings*.json
+!appsettings.example.json
+application*.json
+*.local.json
+*.secrets.json
 *.user
 *.suo
 .env
