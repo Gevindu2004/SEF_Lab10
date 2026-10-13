@@ -1,0 +1,8 @@
+bin/
+obj/
+appsettings.Production.json
+*.user
+*.suo
+.env
+.env.*
+!.env.example
