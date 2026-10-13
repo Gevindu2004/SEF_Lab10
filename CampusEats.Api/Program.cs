@@ -83,4 +83,12 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+// Health Check endpoint for cloud monitoring (Render Health Check Path)
+app.MapGet("/health", () => Results.Ok(new
+{
+    status = "Healthy",
+    service = "CampusEats API",
+    timestamp = DateTime.UtcNow
+}));
+
 app.Run();
